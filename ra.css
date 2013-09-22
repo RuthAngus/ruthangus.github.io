@@ -15,7 +15,8 @@ p {
 }
 
 h1 {
-	color: #ff6;
+	/* color: #ff6; */
+	color: #333;
 	font-size: 1.5em;
 	font-weight: bold;
 }
