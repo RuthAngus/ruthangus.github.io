@@ -1,8 +1,10 @@
 @charset "utf-8";
 /* CSS Document */
 
+
 body {
-	font-family: geneva, arial, helvetica, sans-serif;	
+	/* font-family: geneva, arial, helvetica, sans-serif; */
+	font-family: 'Sansita One', cursive;	
 	background-color: white;
 	color: #333;
 	margin-left: 200px;
