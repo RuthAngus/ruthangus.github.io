@@ -3,19 +3,14 @@
 
 
 body {
-	/* font-family: geneva, arial, helvetica, sans-serif; */
 	font-family: 'Sansita One', cursive;	
 	background-color: white;
 	color: #333;
 	margin-left: 200px;
 	margin-top: 20px;
-	/* background-image: url(images/starfield.jpg); */
 }
 
 p {	
-	/* font-size: 0.8 em; */
-        /* background: #000;  */
-	/* color: #fff;  */
         font-family: 'Pathway Gothic One', sans-serif;
         font-size:20px;
 	color: teal
@@ -24,8 +19,6 @@ p {
 
 H1 {
 	color: orange;
-	/* background: #000;  */
-	/* color: #fff;  */
 	/* text-shadow: 2px 2px #C0C0C0; */
 	font-size: 4.1em;
 	font-weight: bold;
@@ -46,8 +39,8 @@ img {
 /* 	width: 500px;	 */
 /* } */
 
-/* .stripe {border-bottom: 1px solid #ff6; */
-	/* width: 500px;	} */
+.stripe {border-bottom: 1px solid #028482;
+	width: 500px;	}
 
 /* video { */
 /* 	border: 1px solid #FFFFFF; */
