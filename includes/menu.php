@@ -1,1 +1,0 @@
-<p class="menu"><a href="/index.php">home</a> &middot;  <a href="/blog/index.php">blog</a> &middot; <a href="/videos/videos.php">videos</a></p>
