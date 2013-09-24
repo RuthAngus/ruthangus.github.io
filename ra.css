@@ -20,7 +20,8 @@ p {
 H1 {
 	/* color: #ff6; */
 	color: #333;
-	font-size: 1.9em;
+	/* font-size: 1.9em; */
+	font-size: 30px;
 	font-weight: bold;
 }
 
