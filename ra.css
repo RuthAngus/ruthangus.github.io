@@ -19,9 +19,8 @@ p {
 }
 
 H1 {
-	/* color: #ff6; */
 	color: orange;
-	/* font-size: 1.9em; */
+	text-shadow: 2px 2px #ff0000;
 	font-size: 1.9em;
 	font-weight: bold;
 }
