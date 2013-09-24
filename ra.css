@@ -25,7 +25,8 @@ H1 {
 }
 
 h2 {	
-        text-align:center
+        text-align:center;
+	font-family: 'Marvel', sans-serif;
 	color: grey;
 	font-size: 4.1em;
 	font-weight: bold;  
