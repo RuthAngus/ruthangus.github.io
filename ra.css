@@ -8,7 +8,7 @@ body {
 	color: #333;
 	margin-left: 200px;
 	margin-top: 20px;
-	background-image: url(images/original.jpg);
+	/* background-image: url(images/original.jpg); */
 }
 
 p {	
@@ -31,7 +31,7 @@ h2 {
 	color: grey;
 	font-size: 6.1em;
 	font-weight: bold;  
-	background-image: url(images/original.jpg);
+	/* background-image: url(images/original.jpg); */
 }
 
 img {
