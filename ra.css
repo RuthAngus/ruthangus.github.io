@@ -13,13 +13,14 @@ body {
 }
 
 p {	
-	font-size: 0.8 em;
+	/* font-size: 0.8 em; */
+        font-size:30px;
 }
 
-h1 {
+H1 {
 	/* color: #ff6; */
 	color: #333;
-	font-size: 20px;
+	font-size: 1.9em;
 	font-weight: bold;
 }
 
