@@ -23,7 +23,6 @@ p {
 H1 {
         text-align:center;
 	color: grey;
-	box-shadow: 10px 10px 5px #888;
 	/* text-shadow: 2px 2px #C0C0C0; */
 	font-size: 4.1em;
 	font-weight: bold;
