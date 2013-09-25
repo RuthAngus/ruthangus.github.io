@@ -14,7 +14,8 @@ body {
 p {	
         font-family: 'Pathway Gothic One', sans-serif;
         font-size:20px;
-	color: teal
+	color: black
+	/* color: teal */
 	/* text-shadow: 2px 2px #FFFFFF; */
 }
 
