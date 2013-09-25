@@ -15,14 +15,14 @@ p {
         text-align:center;
 	font-family: 'Pathway Gothic One', sans-serif;
         font-size:20px;
-	color: black
+	color: grey
 	/* color: teal */
 	/* text-shadow: 2px 2px #FFFFFF; */
 }
 
 H1 {
         text-align:center;
-	color: grey;
+	color: black;
 	text-shadow: 0.1em 0.1em 0.2em black0;
 	font-size: 4.1em;
 	font-weight: bold;
