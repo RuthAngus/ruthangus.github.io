@@ -12,7 +12,8 @@ body {
 }
 
 p {	
-        font-family: 'Pathway Gothic One', sans-serif;
+        text-align:center;
+	font-family: 'Pathway Gothic One', sans-serif;
         font-size:20px;
 	color: black
 	/* color: teal */
@@ -20,6 +21,7 @@ p {
 }
 
 H1 {
+        text-align:center;
 	color: orange;
 	/* text-shadow: 2px 2px #C0C0C0; */
 	font-size: 4.1em;
