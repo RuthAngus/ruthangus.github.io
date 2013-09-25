@@ -22,9 +22,8 @@ p {
 
 H1 {
         text-align:center;
-	color: teal;
-	text-shadow: black 0.1em 0.1em 0.2em
-	/* text-shadow: 2px 2px #C0C0C0; */
+	color: grey;
+	text-shadow: 2px 2px #C0C0C0;
 	font-size: 4.1em;
 	font-weight: bold;
 }
