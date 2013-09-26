@@ -19,6 +19,13 @@ H1 {
 	font-size: 4.1em;
 	font-weight: bold;
 }
+p {	
+	font-family: font-family: 'Marvel', sans-serif;
+	/* font-family: 'Carrois Gothic', sans-serif; */
+	/* font-family: 'Arapey', serif; */
+        font-size: 20px;
+	color: black
+}
 
 h4 {	
         text-align:center;
@@ -31,13 +38,7 @@ h4 {
 	/* color: teal */
 	/* text-shadow: 2px 2px #FFFFFF; */
 }
-p {	
-	/* font-family: font-family: 'Marvel', sans-serif; */
-	/* font-family: 'Carrois Gothic', sans-serif; */
-	font-family: 'Arapey', serif;
-        font-size: 20px;
-	color: black
-}
+
 
 
 
