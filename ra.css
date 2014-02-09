@@ -81,8 +81,8 @@ img {
 }
 
 a {
-	a:link {color:#99CC99;}    /* unvisited link */
-	a:visited {color:#99CC99;} /* visited link */
+	link color:#99CC99;    /* unvisited link */
+	visited color:#99CC99; /* visited link */
 }
 
 /* .menu { */
