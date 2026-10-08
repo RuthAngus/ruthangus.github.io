@@ -1,215 +1,232 @@
-<!DOCTYPE HTML>
-<!--
-	Twenty by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>ruth angus</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="index">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--PREVIEW-START-->
+<title>Dr. Ruth Angus</title>
+<meta name="description" content="Ruth Angus is an astrophysicist at the American Museum of Natural History studying stars, exoplanets and planetary habitability, and the author of the forthcoming book The Perfect Star.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a quiet single column with a two-up intro (bio + portrait); sections separated by space, labelled with small mono eyebrows. */
+:root {
+  --bg: #f6f7f9;
+  --surface: #ffffff;
+  --ink: #1b2130;
+  --muted: #5a6274;
+  --line: #dde1e8;
+  --accent: #a8640f;        /* G-star gold, darkened for contrast on light */
+  --accent-soft: #f3e6d2;
+  --font-display: "Spectral", Georgia, "Times New Roman", serif;
+  --font-body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, Menlo, Consolas, monospace;
+  --measure: 40rem;
+  --wide: 66rem;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11151d; --surface: #181d27; --ink: #e7e9ee; --muted: #9aa2b2;
+    --line: #2a3140; --accent: #e7a94a; --accent-soft: #2e2617; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11151d; --surface: #181d27; --ink: #e7e9ee; --muted: #9aa2b2;
+  --line: #2a3140; --accent: #e7a94a; --accent-soft: #2e2617; color-scheme: dark;
+}
 
-			<!-- Header -->
-				<header id="header" class="alt">
-					<h1 id="logo"><a href="index.html">RUTH ANGUS <span>ASTRONOMY</span></a></h1>
-					<nav id="nav">
-						<ul>
-							<li class="current"><a href="index.html">Home</a></li>
-							<li class="submenu">
-								<a href="#">More stuff</a>
-								<ul>
-									<!-- <li><a href="research.html">Research</a></li> -->
-									<li><a href="outreach.html">Outreach</a></li>
-									<li><a href="cv.html">CV</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</nav>
-				</header>
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--bg); color: var(--ink);
+  font-family: var(--font-body); font-size: 1.0625rem; line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+.wrap { max-width: var(--wide); margin: 0 auto; padding-inline: clamp(1rem, 4vw, 2.5rem); }
+a { color: var(--accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+img { max-width: 100%; display: block; }
 
-			<!-- Banner -->
-				<section id="banner">
+/* Header */
+.site-header {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.site-header .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 0.9rem; }
+.wordmark { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; color: var(--ink); text-decoration: none; letter-spacing: 0.01em; }
+.site-nav { display: flex; flex-wrap: wrap; gap: 0.25rem 1.4rem; font-size: 0.92rem; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover { color: var(--ink); }
 
-					<!--
-						".inner" is set up as an inline-block so it automatically expands
-						in both directions to fit whatever's inside it. This means it won't
-						automatically wrap lines, so be sure to use line breaks where
-						appropriate (<br />).
-					-->
-					<div class="inner">
+/* Intro */
+.intro { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.85fr); gap: clamp(2rem, 5vw, 4.5rem); align-items: center; padding-block: clamp(3rem, 8vw, 6rem) clamp(2.5rem, 6vw, 4.5rem); }
+.intro-text { min-width: 0; }
+.eyebrow { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin: 0 0 1rem; }
+h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(2.8rem, 7vw, 4.6rem); line-height: 1.02; letter-spacing: -0.015em; margin: 0 0 1.5rem; text-wrap: balance; }
+.lede { font-size: 1.2rem; line-height: 1.6; max-width: 34rem; margin: 0 0 1.75rem; }
+.links { display: flex; flex-wrap: wrap; gap: 0.6rem; padding: 0; margin: 0; list-style: none; }
+.links a { display: inline-block; padding: 0.45rem 0.95rem; border: 1px solid var(--line); border-radius: 999px; font-size: 0.9rem; color: var(--ink); text-decoration: none; background: var(--surface); }
+.links a:hover { border-color: var(--accent); color: var(--accent); }
+.portrait { margin: 0; }
+.portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: 6px; }
+.portrait figcaption { font-family: var(--font-mono); font-size: 0.72rem; color: var(--muted); margin-top: 0.6rem; letter-spacing: 0.04em; }
 
-						<header>
-							<h2>RUTH ANGUS</h2>
-						</header>
-						<p>Assistant Curator and Professor of Astrophysics at the American Museum of Natural History</p>
-						<footer>
-							<ul class="buttons vertical">
-								<li><a href="#main" class="button fit scrolly">My research</a></li>
-							</ul>
-						</footer>
+/* Sections */
+section { padding-block: clamp(2.5rem, 6vw, 4rem); border-top: 1px solid var(--line); }
+.section-grid { display: grid; grid-template-columns: minmax(0, 14rem) minmax(0, 1fr); gap: 1rem clamp(2rem, 5vw, 4rem); }
+h2 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.7rem, 3.4vw, 2.2rem); line-height: 1.15; margin: 0; text-wrap: balance; }
+h3 { font-family: var(--font-display); font-weight: 500; font-size: 1.3rem; line-height: 1.3; margin: 0 0 0.4rem; text-wrap: balance; }
+.prose { max-width: var(--measure); min-width: 0; }
+.prose p { margin: 0 0 1rem; }
+.prose p:last-child { margin-bottom: 0; }
 
-					</div>
+.themes { display: grid; gap: 1.75rem; margin: 0; padding: 0; list-style: none; }
+.themes li { min-width: 0; }
+.themes p { margin: 0; color: var(--muted); }
 
-				</section>
+/* Book */
+.book { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 1.75rem; align-items: start; }
+.book-mark {
+  width: 7.5rem; aspect-ratio: 2 / 3; border-radius: 2px 6px 6px 2px;
+  background: var(--accent-soft); border: 1px solid var(--line);
+  display: grid; place-items: center; text-align: center; padding: 0.75rem;
+  font-family: var(--font-display); font-style: italic; font-size: 1.05rem; line-height: 1.2; color: var(--accent);
+}
+.book h3 { font-style: italic; font-size: 1.6rem; }
+.book .meta { font-family: var(--font-mono); font-size: 0.8rem; color: var(--muted); margin: 0 0 1rem; letter-spacing: 0.03em; }
 
-			<!-- Main -->
-				<article id="main">
+/* Lists of links */
+.link-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.link-list li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 1rem; align-items: baseline; padding-block: 0.9rem; border-bottom: 1px solid var(--line); }
+.link-list li:first-child { padding-top: 0; }
+.link-list .what { min-width: 0; }
+.link-list .what span { display: block; color: var(--muted); font-size: 0.95rem; }
+.link-list a.go { font-size: 0.92rem; white-space: nowrap; }
 
-					<header class="special container">
-						<h2>Stars & exoplanets
-						</h2>
-						<p>
-						I'm interested in stellar ages, stellar rotation, and planetary evolution,
-						<br />
-						Check out some of my  <a href="http://arxiv.org/find/all/1/all:+AND+ruth+angus/0/1/0/all/0/1">papers</a>.</p>
-						<br />
-                        Prospective students or collaborators may be interested in my <a href="https://docs.google.com/document/d/1CtSC-eav7T35RaNAvoTqOEChya4DTy-QTtzfuiusc4g/edit?usp=sharing">Research Expectations</a>.</p>
-					</header>
+/* Footer */
+.site-footer { border-top: 1px solid var(--line); padding-block: 2rem 3rem; color: var(--muted); font-size: 0.88rem; }
+.site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; }
+.sun { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
 
-								</div>
-							</div>
+@media (max-width: 760px) {
+  .intro { grid-template-columns: minmax(0, 1fr); }
+  .portrait { max-width: 20rem; order: -1; }
+  .section-grid { grid-template-columns: minmax(0, 1fr); }
+  .book { grid-template-columns: minmax(0, 1fr); }
+}
+</style>
+<!--PREVIEW-HEAD-END-->
+</head>
+<body>
+<!--PREVIEW-BODY-START-->
+<header class="site-header">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Dr. Ruth Angus</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#research">Research</a>
+      <a href="#book">Book</a>
+      <a href="#papers">Papers &amp; code</a>
+      <a href="#students">Students</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
 
-							<footer class="major">
-							</footer>
+<main id="top">
+  <div class="wrap">
+    <div class="intro">
+      <div class="intro-text">
+        <p class="eyebrow">Astrophysicist &middot; Author</p>
+        <h1>Dr. Ruth Angus</h1>
+        <p class="lede">I'm an Associate Curator and Professor of Astrophysics at the American Museum of Natural History. My research focuses on stars and exoplanets, with an emphasis on stellar magnetism, exoplanet discovery, and planetary habitability. My forthcoming book, <em>The Perfect Star</em>, is under contract with Yale University Press.</p>
+        <ul class="links">
+          <li><a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Angus%2C%20Ruth%22&amp;sort=date%20desc">Publications</a></li>
+          <li><a href="https://github.com/RuthAngus">GitHub</a></li>
+        </ul>
+      </div>
+      <figure class="portrait">
+        <img src="images/headshot-square.jpg" alt="Ruth Angus at the American Museum of Natural History" width="739" height="739">
+        <figcaption>American Museum of Natural History, New York</figcaption>
+      </figure>
+    </div>
+  </div>
 
-						</section>
+  <section id="research">
+    <div class="wrap section-grid">
+      <h2>Research</h2>
+      <ul class="themes prose">
+        <li>
+          <h3>Stellar magnetism, rotation, and ages</h3>
+          <p>Stars spin down as they age, and their magnetic activity declines too. I use the rotation rates of stars to measure their ages, a method known as gyrochronology.</p>
+        </li>
+        <li>
+          <h3>Exoplanet discovery</h3>
+          <p>The search for a second Earth requires detailed understanding of stars. I think about how to tease tiny Earth-mass planet signals out of data that is swamped by stellar variability.</p>
+        </li>
+        <li>
+          <h3>Planetary habitability</h3>
+          <p>A planet's environment depends on its host star. I study the magnetic and high-energy environments of exoplanets. I am also interested, generally, in what drives habitable conditions in planetary systems.</p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-				</article>
+  <section id="book">
+    <div class="wrap section-grid">
+      <h2>Book</h2>
+      <div class="book prose">
+        <div class="book-mark" aria-hidden="true">The Perfect Star</div>
+        <div>
+          <h3>The Perfect Star</h3>
+          <p class="meta">Yale University Press &middot; 2029</p>
+          <p>My first book for a general audience is under contract with Yale University Press. More details will appear here closer to publication.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-				</section>
+  <section id="papers">
+    <div class="wrap section-grid">
+      <h2>Papers &amp; code</h2>
+      <ul class="link-list prose">
+        <li><div class="what">Publications<span>Full list on NASA ADS, newest first</span></div><a class="go" href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Angus%2C%20Ruth%22&amp;sort=date%20desc">NASA ADS</a></li>
+        <li><div class="what">Software<span>Open-source code for stellar ages, rotation and light curves</span></div><a class="go" href="https://github.com/RuthAngus">GitHub</a></li>
+      </ul>
+    </div>
+  </section>
 
-					<!-- <1!-- Three --1> -->
-					<!-- 	<section class="wrapper style3 container special"> -->
+  <section id="students">
+    <div class="wrap section-grid">
+      <h2>Students</h2>
+      <div class="prose">
+        <p>I work with students from Columbia University and CUNY, and postdocs at the American Museum of Natural History. If you're interested in working with me, please read my research expectations first.</p>
+        <p><a href="https://docs.google.com/document/d/1CtSC-eav7T35RaNAvoTqOEChya4DTy-QTtzfuiusc4g/edit?usp=sharing">Research expectations</a></p>
+      </div>
+    </div>
+  </section>
 
-					<!-- 		<header class="major"> -->
-					<!-- 			<h2>Research highlights</h2> -->
-					<!-- 		</header> -->
+  <section id="contact">
+    <div class="wrap section-grid">
+      <h2>Contact</h2>
+      <div class="prose">
+        <p><a href="mailto:rangus@amnh.org">rangus@amnh.org</a></p>
+        <p>Department of Astrophysics<br>American Museum of Natural History<br>200 Central Park West, New York, NY 10024</p>
+      </div>
+    </div>
+  </section>
+</main>
 
-					<!-- 		<div class="row"> -->
-					<!-- 			<div class="6u 12u(narrower)"> -->
-
-					<!-- 				<section> -->
-					<!-- 					<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a> -->
-					<!-- 					<header> -->
-					<!-- 						<h3>Gyrochronology</h3> -->
-					<!-- 					</header> -->
-					<!-- 					<p> -->
-					<!-- 					Data from the Kepler spacecraft reveal a tension between asteroseismic -->
-					<!-- 					and gyrochronological ages. -->
-					<!-- 					<a href="http://ruthangus.github.io/research.html">Find out more</a>. -->
-					<!-- 					</p> -->
-					<!-- 				</section> -->
-
-					<!-- 			</div> -->
-					<!-- 			<div class="6u 12u(narrower)"> -->
-
-					<!-- 				<section> -->
-					<!-- 					<a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a> -->
-					<!-- 					<header> -->
-					<!-- 						<h3>the SIP</h3> -->
-					<!-- 					</header> -->
-					<!-- 					<p>A method for producing Systematics-Insensitive Periodograms of K2 data. -->
-					<!-- 					It's called the SIP. -->
-					<!-- 					<a href="http://ruthangus.github.io/research.html">Find out more</a>. -->
-					<!-- 					</p> -->
-					<!-- 				</section> -->
-
-					<!-- 			</div> -->
-					<!-- 		</div> -->
-					<!-- 		<div class="row"> -->
-					<!-- 			<div class="6u 12u(narrower)"> -->
-
-					<!-- 				<section> -->
-					<!-- 					<a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a> -->
-					<!-- 					<header> -->
-					<!-- 						<h3>Flicker</h3> -->
-					<!-- 					</header> -->
-					<!-- 					<p>Recalibrating the relations between flicker, surface gravity and stellar density -->
-					<!-- 					using a Hierarchical Bayesian Model and characterising the intrinsic `jitter' in these relations. -->
-					<!-- 					<a href="https://github.com/ruthangus/flicker">See the code</a>. -->
-					<!-- 					</p> -->
-					<!-- 				</section> -->
-
-					<!-- 			</div> -->
-					<!-- 			<div class="6u 12u(narrower)"> -->
-
-					<!-- 				<section> -->
-					<!-- 					<a href="#" class="image featured"><img src="images/pic04.jpg" alt="" /></a> -->
-					<!-- 					<header> -->
-					<!-- 						<h3>Exoplanets with evolved hosts</h3> -->
-					<!-- 					</header> -->
-					<!-- 					<p>It's hard to find exoplanets orbiting massive stars using the radial velocity method, -->
-					<!-- 					so instead we look at evolved stars. These stars have high amplitude asteroseismic pulsations -->
-					<!-- 					which produce RV jitter, so I've come up with an observing strategy to get around this problem. -->
-					<!-- 					<a href="https://github.com/ruthangus/Subgiants">See the code</a>. -->
-					<!-- 					</p> -->
-					<!-- 				</section> -->
-
-					<!-- 			</div> -->
-					<!-- 		</div> -->
-
-					<!-- 		<footer class="major"> -->
-					<!-- 			<ul class="buttons"> -->
-					<!-- 				<1!-- <li><a href="#" class="button">More about my research</a></li> --1> -->
-					<!-- 			</ul> -->
-					<!-- 		</footer> -->
-
-					<!-- 	</section> -->
-
-				<!-- </article> -->
-
-			<!-- CTA -->
-				<section id="cta">
-
-					<header>
-						<h2>Want to see <strong>more</strong>?</h2>
-						<p>Check out my code or my CV</p>
-					</header>
-					<footer>
-						<ul class="buttons">
-							<li><a href="https://github.com/RuthAngus" class="button special">code</a></li>
-							<li><a href="http://ruthangus.github.io/cv.pdf" class="button">CV</a></li>
-						</ul>
-					</footer>
-
-
-			<!-- Footer -->
-				<footer id="footer">
-
-					<ul class="icons">
-						<li><a href="https://github.com/RuthAngus" class="icon circle fa-github"><span class="label">Github</span></a></li>
-						<li><a href="https://twitter.com/ruthangus" class="icon circle fa-twitter"><span class="label">Twitter</span></a></li>
-						<!-- <li><a href="https://www.facebook.com/ruth.angus" class="icon circle fa-facebook"><span class="label">Facebook</span></a></li> -->
-						<!-- <li><a href="https://plus.google.com/u/1/105074351423505759080/posts" class="icon circle fa-google-plus"><span class="label">Google+</span></a></li> -->
-					</ul>
-
-					<ul class="copyright">
-						<li>&copy; Ruth Angus</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-					</ul>
-
-				</footer>
-
-		</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollgress.min.js"></script>
-			<script src="assets/js/skel.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="assets/js/main.js"></script>
-
-	</body>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>&copy; 2026 Ruth Angus</span>
+    <span class="sun">The Sun &middot; G2V &middot; 5772 K &middot; rotation &asymp; 25 days</span>
+  </div>
+</footer>
+<!--PREVIEW-BODY-END-->
+</body>
 </html>
